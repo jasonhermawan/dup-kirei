@@ -1,0 +1,22 @@
+.layout {
+  width: 1150px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .layout {
+    width: 750px;
+  }
+}
+
+@media (max-width: 770px) {
+  .layout {
+    width: 350px;
+  }
+}
