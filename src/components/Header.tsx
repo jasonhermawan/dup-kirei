@@ -1,20 +1,21 @@
 "use client";
-import { Avatar, Box, Divider, Flex, Stack, Text, Drawer } from "@mantine/core";
+import { Box, Divider, Flex, Stack, Drawer, Button } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import "../app/globals.css";
 import HeaderLinks from "./HeaderLinks";
+import Logo from '../assets/logo-blue.png'
+import Image from 'next/image'
 
 const Header = () => {
   const pathname = usePathname();
+  const router = useRouter()
   const [opened, { open, close }] = useDisclosure(false);
-  const linkStyle = { textDecoration: "none", color: "black" };
 
   const navDrawer = () => {
     return (
-      <Drawer size="xs" opened={opened} onClose={close}>
+      <Drawer size="xs" opened={opened} onClose={close} position="right">
         <Stack gap="lg" mt="20px">
           <HeaderLinks params="/" title="Home" />
           <Divider color="rgba(0,0,0,0.07)" />
@@ -35,57 +36,35 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <Box>
+    <Box className="layout" py="30px" bg="white">
       {navDrawer()}
-      <Box className="layout" py="xl">
-        <Link href="/" style={linkStyle}>
-          <Stack align="center" gap="10px">
-            <Avatar
-              src="https://i0.wp.com/kireiwash.com/wp-content/uploads/2021/07/cropped-output-onlinepngtools.png?w=1080&ssl=1"
-              alt="Kirei Logo"
-              size="70px"
-            />
-            <Box ta="center">
-              <Text size="30px" mb="10px">
-                {" "}
-                Kirei きれい Wash & Beyond
-              </Text>
-              <Text size="12px" color="#777777">
-                {" "}
-                The 1st Premium Eco-Laundromat in Indonesia
-              </Text>
-            </Box>
-          </Stack>
-        </Link>
-      </Box>
-      <Divider color="rgba(0,0,0,0.07)" />
-      <Box className="layout" py="25px">
-        <Flex align="center" justify="space-between">
-          <Flex gap="xl" visibleFrom="md">
-            <HeaderLinks params="/" title="Home" />
+      <Flex justify="space-between">
+        <Flex align="center" gap="40px">
+          <Image
+          onClick={() => router.push("/")}
+            src={Logo}
+            height={30}
+            alt="Picture of the author"
+          />
+          <Flex align="center" gap="40px" visibleFrom="lg">
             <HeaderLinks params="/about-us" title="About Us" />
             <HeaderLinks params="/our-services" title="Our Services" />
             <HeaderLinks params="/eco-community" title="Eco Community" />
             <HeaderLinks params="/partnership" title="Partnership" />
           </Flex>
-          <Box hiddenFrom="md">
-            <i
-              className="bx bx-menu"
-              style={{ fontSize: "28px" }}
-              onClick={open}
-            ></i>
-          </Box>
-          <Flex gap="md">
-            <Link href="/">
-              <i className="bx bx-unlink" style={{ color: "black" }} />
-            </Link>
-            <Link href="/">
-              <i className="bx bxl-instagram" style={{ color: "black" }} />
-            </Link>
-          </Flex>
         </Flex>
-      </Box>
-      <Divider color="rgba(0,0,0,0.07)" />
+        <Flex align="center" gap="20px" visibleFrom="lg">
+          <Button variant="outline" color="black" h="40px" onClick={() => router.push("/login")}>Login / Sign up</Button>
+          <Button h="40px">Download Apps</Button>
+        </Flex>
+        <Box hiddenFrom="lg">
+          <i
+            className="bx bx-menu"
+            style={{ fontSize: "28px" }}
+            onClick={open}
+          />
+        </Box>
+      </Flex>
     </Box>
   );
 };

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Baskervville } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import '@mantine/core/styles.css';
 import {MantineProvider, ColorSchemeScript, Box} from '@mantine/core';
 import Header from '../components/Header'
 import Footer from '../components/Footer';
 
-const baskervville = Baskervville({ subsets: ['latin'], weight: "400" })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,7 +24,7 @@ export default function RootLayout({
         <ColorSchemeScript />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
       </head>
-      <body className={baskervville.className}>
+      <body className={inter.className}>
         <MantineProvider>
           <Header />
           <Box className='layout'>
