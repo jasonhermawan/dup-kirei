@@ -36,7 +36,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <Box className="layout" py="30px" bg="white">
+    <Box className="layout" py="20px" bg="white">
       {navDrawer()}
       <Flex justify="space-between">
         <Flex align="center" gap="40px">
