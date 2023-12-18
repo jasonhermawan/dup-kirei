@@ -44,8 +44,8 @@ const Services = () => {
   return (
     <Box className='layout' py="50px">
       <Box ta="center" mb="50px" visibleFrom='xl'>
-        <Text size='36px' mb="25px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
-        <Text size='52px' fw="500" lts="-0.5px">Your Laundry is about to Help Our Earth and Ocean!</Text>
+        <Text size='32px' mb="25px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
+        <Text size='42px' fw="500" lts="-0.5px">Your Laundry is about to Help Our Earth and Ocean!</Text>
       </Box>
       <Box ta="center" hiddenFrom='xl' visibleFrom='lg' mb="35px">
         <Text size='32px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>

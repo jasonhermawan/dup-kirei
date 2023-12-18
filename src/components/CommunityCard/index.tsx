@@ -19,9 +19,9 @@ const CommunityCard = ({image, name, title } : CommunityProps) => {
         />
       </AspectRatio>
       <Text color="rgba(37, 99, 235, 1)" size="18px" fw="500" mb="20px" visibleFrom="lg">{name}</Text>
-      <Text size="25px" fw="600" mb="5px" visibleFrom="lg" lh="30px">{title}</Text>
+      <Text size="25px" fw="500" mb="5px" visibleFrom="lg" lh="30px" lineClamp={2}>{title}</Text>
       <Text color="rgba(37, 99, 235, 1)" size="14px" fw="500" mb="20px" hiddenFrom="lg">{name}</Text>
-      <Text size="20px" fw="600" mb="5px" hiddenFrom="lg">{title}</Text>
+      <Text size="20px" fw="500" mb="5px" hiddenFrom="lg" lh="25px" lineClamp={3}>{title}</Text>
       <Button variant="transparent" p="0px" mb="20px" color="rgba(37, 99, 235, 1)" >{"Learn More >>"}</Button>
     </Box>
   );

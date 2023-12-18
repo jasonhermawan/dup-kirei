@@ -48,11 +48,11 @@ const Community = () => {
     <Box className='layout' py="50px">
       <Box mb="50px" visibleFrom='xl' w="65%">
         <Text size='36px' mb="25px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
-        <Text size='52px' fw="500" lts="-0.8px" lh="62px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
+        <Text size='42px' fw="500" lts="-0.8px" lh="55px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
       </Box>
       <Box hiddenFrom='xl' visibleFrom='lg' mb="35px">
         <Text size='32px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
-        <Text size='42px' fw="500" lts="-0.5px" lh="48px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
+        <Text size='36px' fw="500" lts="-0.5px" lh="48px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
       </Box>
       <Box hiddenFrom='lg' mb="35px">
         <Text size='28px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
