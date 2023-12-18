@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <MantineProvider>
           <Header />
-          <Box className='layout'>
+          <Box mih="75vh">
             {children}
           </Box>
           <Footer />
