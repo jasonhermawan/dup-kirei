@@ -11,7 +11,7 @@ type LinkProps = {
 const HeaderLinks = ({params, title} : LinkProps) => {
   const pathname = usePathname();
   const linkStyle = { textDecoration: "none", color: "black" };
-  const activeStyle = { textDecoration: "none", color: "black" };
+  const activeStyle = { textDecoration: "none", color: "rgba(56, 178, 247, 1)" };
 
   return (
     <Link

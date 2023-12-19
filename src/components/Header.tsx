@@ -27,6 +27,10 @@ const Header = () => {
           <Divider color="rgba(0,0,0,0.07)" />
           <HeaderLinks params="/partnership" title="Partnership" />
         </Stack>
+        <Stack pos="absolute" bottom="20px" right="20px" left="20px">
+          <Button w="100%" variant="outline" color="black" h="40px" onClick={() => router.push("/login")}>Login / Sign up</Button>
+          <Button w="100%" h="40px">Download Apps</Button>
+        </Stack>
       </Drawer>
     );
   };
@@ -36,12 +40,13 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <Box className="layout" py="30px" bg="white">
+    <Box className="layout" py="20px" bg="white">
       {navDrawer()}
       <Flex justify="space-between">
         <Flex align="center" gap="40px">
           <Image
-          onClick={() => router.push("/")}
+            style={{cursor: "pointer"}}
+            onClick={() => router.push("/")}
             src={Logo}
             height={30}
             alt="Picture of the author"

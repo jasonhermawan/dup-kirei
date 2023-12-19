@@ -1,3 +1,11 @@
+.layout-container {
+  min-height: calc(100vh - 80px);
+}
+
+body {
+  background-color: rgb(247, 248, 248) !important;
+}
+
 .layout {
   padding-left: 70px;
   padding-right: 70px;
