@@ -42,18 +42,18 @@ const Services = () => {
     )
   }
   return (
-    <Box className='layout' py="50px">
+    <Box className='layout' py="50px" pb="150px">
       <Box ta="center" mb="50px" visibleFrom='xl'>
         <Text size='32px' mb="25px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
-        <Text size='42px' fw="500" lts="-0.5px">Your Laundry is about to Help Our Earth and Ocean!</Text>
+        <Text size='34px' fw="500" lts="-0.5px">Your Laundry is about to Help Our Earth and Ocean!</Text>
       </Box>
       <Box ta="center" hiddenFrom='xl' visibleFrom='lg' mb="35px">
-        <Text size='32px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
-        <Text size='42px' fw="500" lts="-0.5px" lh="42px">Your Laundry is about to Help Our Earth and Ocean!</Text>
+        <Text size='28px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
+        <Text size='32px' fw="500" lts="-0.5px" lh="42px">Your Laundry is about to Help Our Earth and Ocean!</Text>
       </Box>
       <Box hiddenFrom='lg' mb="35px">
-        <Text size='28px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
-        <Text size='36px' fw="500" lts="-0.5px" lh="42px">Your Laundry is about to Help Our Earth and Ocean!</Text>
+        <Text size='20px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Our Services</Text>
+        <Text size='22px' fw="500" lts="-0.5px" lh="32px">Your Laundry is about to Help Our Earth and Ocean!</Text>
       </Box>
       <Flex wrap="wrap" w="90%" m="auto" visibleFrom='md'>
         {printServiceCard()}

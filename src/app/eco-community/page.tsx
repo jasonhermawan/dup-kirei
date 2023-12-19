@@ -1,6 +1,7 @@
 import CommunityCard from '@/components/CommunityCard'
 import { Box, Flex, Text } from '@mantine/core'
 import React from 'react'
+import './community.css'
 
 const Community = () => {
   const printCommunityCard = () => {
@@ -45,23 +46,26 @@ const Community = () => {
     )
   }
   return (
-    <Box className='layout' py="50px">
+    <Box className='layout community-container' py="50px" pb="150px">
       <Box mb="50px" visibleFrom='xl' w="65%">
-        <Text size='36px' mb="25px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
-        <Text size='42px' fw="500" lts="-0.8px" lh="55px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
+        <Text size='32px' mb="25px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
+        <Text size='34px' fw="500" lts="-0.8px" lh="45px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
       </Box>
       <Box hiddenFrom='xl' visibleFrom='lg' mb="35px">
-        <Text size='32px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
-        <Text size='36px' fw="500" lts="-0.5px" lh="48px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
+        <Text size='28px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
+        <Text size='32px' fw="500" lts="-0.5px" lh="48px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
       </Box>
       <Box hiddenFrom='lg' mb="35px">
-        <Text size='28px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
+        <Text size='20px' mb="18px" fw="700" color='rgba(56, 178, 247, 1)' lts="-0.5px">Eco Community</Text>
         <Text size='22px' fw="500" lts="-0.5px" lh="32px">We actively partner with eco communities, as part of our commitment to promote eco-friendly lifestyle, especially in laundry.</Text>
       </Box>
-      <Flex wrap="wrap" w="90%" m="auto" visibleFrom='md'>
+      <Flex wrap="wrap" w="85%" m="auto" visibleFrom='xl'>
         {printCommunityCard()}
       </Flex>
-      <Flex wrap="wrap" w="100%" m="auto" hiddenFrom='md'>
+      <Flex wrap="wrap" w="95%" m="auto" visibleFrom='lg' hiddenFrom='xl'>
+        {printCommunityCard()}
+      </Flex>
+      <Flex wrap="wrap" w="100%" m="auto" hiddenFrom='lg'>
         {printCommunityCard()}
       </Flex>
     </Box>

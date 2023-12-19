@@ -58,7 +58,7 @@ const Partnership = () => {
   <Box bg="white" mih="100vh">
    <Flex className='layout partnership-layout' m="auto" pt="50px" pb="50px" align="center">
     <Box w="60%" pr="150px" visibleFrom='lg'>
-      <Text size='38px' fw="600" mb="10px">Partnership</Text>
+      <Text size='34px' fw="600" mb="10px">Partnership</Text>
       <Text color='rgba(102, 112, 133, 1)' size='18px' lh="28px">For business parnership inquiries, please reach us through email.</Text>
       <Box mt="10px">
         {printForm()}
@@ -72,8 +72,8 @@ const Partnership = () => {
       </Box>
     </Box>
     <Box w="100%" hiddenFrom='sm'>
-      <Text size='30px' fw="600" mb="10px">Partnership</Text>
-      <Text color='rgba(102, 112, 133, 1)' size='16px' lh="28px">For business parnership inquiries, please reach us through email.</Text>
+      <Text size='26px' fw="600" mb="10px">Partnership</Text>
+      <Text color='rgba(102, 112, 133, 1)' size='16px' lh="23px">For business parnership inquiries, please reach us through email.</Text>
       <Box mt="15px">
         {printForm()}
       </Box>

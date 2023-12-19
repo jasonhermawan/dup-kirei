@@ -21,7 +21,7 @@ const ServiceCard = ({image, title, price, unit, children} : ServiceProps) => {
         />
       </AspectRatio>
       <Text size="20px" fw="500" mb="20px" visibleFrom="lg">{title}</Text>
-      <Text size="32px" fw="500" mb="20px" visibleFrom="lg">IDR {price?.toLocaleString()},-<span style={{fontSize: "14px", color: 'rgba(102, 112, 133, 1)', fontWeight: "400"}}> / {unit}</span></Text>
+      <Text size="30px" fw="500" mb="20px" visibleFrom="lg">IDR {price?.toLocaleString()},-<span style={{fontSize: "14px", color: 'rgba(102, 112, 133, 1)', fontWeight: "400"}}> / {unit}</span></Text>
       <Text size="16px" fw="500" mb="20px" hiddenFrom="lg">{title}</Text>
       <Text size="24px" fw="500" mb="20px" hiddenFrom="lg">IDR {price?.toLocaleString()},-<span style={{fontSize: "14px", color: 'rgba(102, 112, 133, 1)', fontWeight: "400"}}> / {unit}</span></Text>
       <Button variant="outline" w="100%" mb="20px">Get Started Now</Button>

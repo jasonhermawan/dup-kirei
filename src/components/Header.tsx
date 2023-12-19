@@ -45,7 +45,8 @@ const Header = () => {
       <Flex justify="space-between">
         <Flex align="center" gap="40px">
           <Image
-          onClick={() => router.push("/")}
+            style={{cursor: "pointer"}}
+            onClick={() => router.push("/")}
             src={Logo}
             height={30}
             alt="Picture of the author"
