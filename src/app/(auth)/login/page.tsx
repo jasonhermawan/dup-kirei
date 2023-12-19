@@ -1,11 +1,15 @@
+"use client"
 import { Box, Button, Checkbox, Flex, Text } from "@mantine/core";
 import Image from "next/image";
 import React from "react";
-import ImageAuth from "./image-auth.png";
+import ImageAuth from "../image-auth.png";
 import InputForm from "@/components/InputForm";
 import "../auth.css";
+import { useRouter } from "next/navigation";
+import PassInput from "@/components/PassInput";
 
 const Login = () => {
+  const router = useRouter()
   const printForm = () => {
     return (
       <>
@@ -14,7 +18,7 @@ const Login = () => {
           placeholder="Enter your email or phone number"
           width="100%"
         />
-        <InputForm
+        <PassInput
           label="Password"
           placeholder="Enter your password"
           width="100%"
@@ -27,7 +31,7 @@ const Login = () => {
             Login
           </Button>
           <Text ta="center" mt="10px">
-            Don't have an account? Sign Up
+            Don't have an account? <span style={{cursor: "pointer", fontWeight: "600"}} onClick={() => router.push("/signup")}>Sign Up</span>
           </Text>
         </Box>
         <Box hiddenFrom="sm" pos="absolute" bottom="20px" right="20px" left="20px">
@@ -35,7 +39,7 @@ const Login = () => {
             Login
           </Button>
           <Text ta="center" mt="10px">
-            Don't have an account? Sign Up
+            Don't have an account? <span style={{cursor: "pointer", fontWeight: "600"}} onClick={() => router.push("/signup")}>Sign Up</span>
           </Text>
         </Box>
       </>
