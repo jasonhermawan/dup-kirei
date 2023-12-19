@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import "../app/globals.css";
 import HeaderLinks from "./HeaderLinks";
 import Logo from '../assets/logo-blue.png'
+import LogoW from '../assets/logo-white.png'
 import Image from 'next/image'
 
 const Header = () => {
@@ -36,13 +37,18 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <Box className="layout" py="30px" bg="white">
+    <Box className="layout" py="30px"
+      pos={pathname === "/" ? "absolute" : undefined}
+      bg={pathname === "/" ? "none" : "white"}
+      w={pathname === "/" ? "100vw" : undefined}
+      style={{zIndex: "9999"}}
+    >
       {navDrawer()}
       <Flex justify="space-between">
         <Flex align="center" gap="40px">
           <Image
-          onClick={() => router.push("/")}
-            src={Logo}
+            onClick={() => router.push("/")}
+            src={pathname === "/" ? LogoW : Logo}
             height={30}
             alt="Picture of the author"
           />
@@ -54,13 +60,13 @@ const Header = () => {
           </Flex>
         </Flex>
         <Flex align="center" gap="20px" visibleFrom="lg">
-          <Button variant="outline" color="black" h="40px" onClick={() => router.push("/login")}>Login / Sign up</Button>
+          <Button variant="outline" color={pathname === "/" ? "white" : "black"} h="40px" onClick={() => router.push("/login")}>Login / Sign up</Button>
           <Button h="40px">Download Apps</Button>
         </Flex>
         <Box hiddenFrom="lg">
           <i
             className="bx bx-menu"
-            style={{ fontSize: "28px" }}
+            style={{ fontSize: "28px", color: pathname === "/" ? "white" : undefined }}
             onClick={open}
           />
         </Box>
