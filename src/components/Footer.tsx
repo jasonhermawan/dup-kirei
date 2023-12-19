@@ -64,7 +64,7 @@ const Footer = () => {
     );
   };
   return (
-    <Box bg="rgba(20, 20, 39, 1)" w="100vw" py="30px" mt="50px">
+    <Box bg="rgba(20, 20, 39, 1)" w="100vw" py="30px">
       {footerMobile()}
       {footerDesktop()}
     </Box>
