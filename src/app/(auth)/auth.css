@@ -1,0 +1,10 @@
+.auth-container {
+  width: 45%;
+  height: calc(100vh - 80px);
+}
+
+@media (max-width: 1025px) {
+  .auth-container {
+    height: 100vh;
+  }
+}

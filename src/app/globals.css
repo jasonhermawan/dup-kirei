@@ -1,5 +1,9 @@
+.layout-container {
+  min-height: calc(100vh - 80px);
+}
+
 body {
-  background-color: rgb(242, 242, 242) !important;
+  background-color: rgb(247, 248, 248) !important;
 }
 
 .layout {
