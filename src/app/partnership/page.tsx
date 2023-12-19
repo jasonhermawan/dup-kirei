@@ -55,8 +55,8 @@ const Partnership = () => {
     )
   }
   return (
-  <Box bg="white">
-   <Flex className='layout partnership-layout' m="auto" pt="50px" pb="120px" align="center">
+  <Box bg="white" mih="100vh">
+   <Flex className='layout partnership-layout' m="auto" pt="50px" pb="50px" align="center">
     <Box w="60%" pr="150px" visibleFrom='lg'>
       <Text size='38px' fw="600" mb="10px">Partnership</Text>
       <Text color='rgba(102, 112, 133, 1)' size='18px' lh="28px">For business parnership inquiries, please reach us through email.</Text>
