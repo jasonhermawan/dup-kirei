@@ -16,7 +16,7 @@ const Header = () => {
 
   const navDrawer = () => {
     return (
-      <Drawer size="xs" opened={opened} onClose={close} position="right">
+      <Drawer size="xs" opened={opened} onClose={close} position="right" zIndex="9999">
         <Stack gap="lg" mt="20px">
           <HeaderLinks params="/" title="Home" />
           <Divider color="rgba(0,0,0,0.07)" />
@@ -45,7 +45,7 @@ const Header = () => {
       pos={pathname === "/" ? "absolute" : undefined}
       bg={pathname === "/" ? "none" : "white"}
       w={pathname === "/" ? "100vw" : undefined}
-      style={{zIndex: "9999"}}
+      style={{zIndex: "100"}}
     >
       {navDrawer()}
       <Flex justify="space-between">
