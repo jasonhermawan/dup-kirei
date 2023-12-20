@@ -1,5 +1,5 @@
 import ServiceCard from '@/components/ServiceCard'
-import { Box, Flex, Text } from '@mantine/core'
+import { AspectRatio, Box, Flex, Skeleton, Text } from '@mantine/core'
 import React from 'react'
 
 const Services = () => {
