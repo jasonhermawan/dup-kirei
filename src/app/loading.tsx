@@ -1,7 +1,7 @@
 "use client";
 import AboutLoader from "@/pageLoader/aboutLoader";
 import CommunityLoader from "@/pageLoader/communityLoader";
-import HomeLoader from "@/pageLoader/homeloader";
+import HomeLoader from "@/pageLoader/homeLoader";
 import PartnershipLoader from "@/pageLoader/partnershipLoader";
 import ServiceLoader from "@/pageLoader/serviceLoader";
 import { Loader } from "@mantine/core";
