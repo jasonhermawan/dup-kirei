@@ -32,7 +32,7 @@ export default function Loading() {
     return <SignupLoader />;
   } else {
     return (
-     <Box w="50%" m="auto" mt="100px">
+     <Box w="50px" m="auto" mt="100px">
       <Loader color="blue" />
      </Box>
     );
