@@ -12,7 +12,7 @@ const HeroApp = () => {
             <Flex className="content" direction={"column"} gap={60} pt={isMobile ? 20 : 100} pb={20} w={isMobile ? "100%" : "45%"}>
                 <Stack>
                     <Text fz={isMobile ? "2.25em" : "1.8em"} fw={600}>Convenience at Your Fingertips</Text>
-                    <Text fz={isMobile ? "1.125em" : "0.7em"} fw={300} c={"#475569"}>In today's fast-paced world, managing your laundry should be as effortless as possible. That's why we've created the Kirei Wash App – your ultimate laundry companion.</Text>
+                    <Text fz={isMobile ? "1.125em" : "0.7em"} fw={300} c={"#475569"}>In today's fast-paced world, managing your laundry should be as effortless as possible. That's why we've created the Kirei Wash App - your ultimate laundry companion.</Text>
                 </Stack>
                 <Flex direction={isMobile ? "column" : "row"} gap={"10%"}>
                     <Image

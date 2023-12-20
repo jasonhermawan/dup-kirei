@@ -16,6 +16,7 @@ const CommunityCard = ({image, name, title } : CommunityProps) => {
           src={image}
           w="100%"
           fit="cover"
+          alt="community-card"
         />
       </AspectRatio>
       <Text color="rgba(37, 99, 235, 1)" size="18px" fw="500" mb="20px" visibleFrom="lg">{name}</Text>

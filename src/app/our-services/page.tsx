@@ -36,7 +36,7 @@ const Services = () => {
           price={20000}
           unit='Kilo'
         >
-          <Text color='rgba(102, 112, 133, 1)'>We provide gentle and professional wash for your babies' clothes, apparels, strollers, car seats, and anything beyond.</Text>
+          <Text color='rgba(102, 112, 133, 1)'>We provide gentle and professional wash for your babies clothes, apparels, strollers, car seats, and anything beyond.</Text>
         </ServiceCard>
       </>
     )

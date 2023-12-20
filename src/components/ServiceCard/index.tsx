@@ -18,6 +18,7 @@ const ServiceCard = ({image, title, price, unit, children} : ServiceProps) => {
           src={image}
           w="100%"
           fit="cover"
+          alt="service-card"
         />
       </AspectRatio>
       <Text size="20px" fw="500" mb="20px" visibleFrom="lg">{title}</Text>
