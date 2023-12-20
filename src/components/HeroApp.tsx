@@ -14,7 +14,7 @@ const HeroApp = () => {
                     <Text fz={isMobile ? "2.25em" : "1.8em"} fw={600}>Convenience at Your Fingertips</Text>
                     <Text fz={isMobile ? "1.125em" : "0.7em"} fw={300} c={"#475569"}>In today's fast-paced world, managing your laundry should be as effortless as possible. That's why we've created the Kirei Wash App - your ultimate laundry companion.</Text>
                 </Stack>
-                <Flex direction={isMobile ? "column" : "row"} gap={"10%"}>
+                <Flex direction={isMobile ? "column" : "row"} gap={"10px"}>
                     <Image
                         src={"/play-store.png"}
                         alt="play-store"

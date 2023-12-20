@@ -1,12 +1,19 @@
 "use client";
-import { Box, Button, Group, Menu, Stack, Text, em } from "@mantine/core";
+import { Box, Button, Group, Menu, Skeleton, Stack, Text, em } from "@mantine/core";
 import { useMediaQuery } from '@mantine/hooks';
 import OutletCard from "@/components/OutletCard";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import classes from "./carousel.module.css"
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import HeroApp from "@/components/HeroApp";
+
+import DeskImage01 from "../../public/home01.png"
+import DeskImage02 from "../../public/home02.png"
+import DeskImage03 from "../../public/home03.png"
+import MobileImage01 from "../../public/mobile-home01.png"
+import HomeLoader from "@/pageLoader/homeLoader";
 
 const outletList = [
   {
@@ -28,12 +35,13 @@ const outletList = [
 ];
 
 const bannerList = [
-  { desktop: "/home01.png", mobile: "/mobile-home01.png" },
-  { desktop: "/home02.png", mobile: "" },
-  { desktop: "/home03.png", mobile: "" }
+  { desktop: DeskImage01, mobile: MobileImage01 },
+  { desktop: DeskImage02, mobile: "" },
+  { desktop: DeskImage03, mobile: "" }
 ]
 
 export default function Home() {
+  const router = useRouter()
   const isMobile = useMediaQuery(`(max-width: ${em(768)})`);
   const [opened, setOpened] = useState(false);
   const [selectedCity, setSelectedCity] = useState(0);
@@ -49,8 +57,8 @@ export default function Home() {
 
   if (typeof (isMobile) === "boolean") {
     return (
-      <Box className="main-page" p={0} style={{ gap: "0px" }} w={"100vw"} fz={isMobile ? 16 : 24}>
-        <Box className="carousel" display={"flex"} bg={"#A18167"} w={"100vw"} h={"100vh"}>
+      <Box className="main-page" p={0} style={{ gap: "0px" }} w={"100vw"} fz={isMobile ? 16 : 21}>
+        <Box className="carousel" display={"flex"} w={"100vw"} h={"100vh"} pos={"relative"}>
           <Carousel slideSize="100%" height={"100%"} w={"100%"} controlsOffset="lg" controlSize={50} loop
             classNames={{ control: classes.control }}
             nextControlIcon={<i className="bx bx-chevron-right" style={{ fontSize: "32px" }} />}
@@ -70,6 +78,12 @@ export default function Home() {
               </Carousel.Slide>
             })}
           </Carousel>
+          <Button pos={"absolute"} hiddenFrom="md" variant="outline" color="white"
+            fw={500} size="md" bottom={40} left={20} right={20} m={"auto"}
+            onClick={() => { router.push("/login") }}
+          >
+            Login
+          </Button>
         </Box>
 
         <Box className="outlet-list" h={"100vh"} pos={"relative"} style={{ overflow: "clip" }}>
@@ -81,10 +95,10 @@ export default function Home() {
             sizes="100vw"
             style={{ display: "block", height: "100vh", width: "100%", objectFit: "cover", position: "absolute", zIndex: "-9999", filter: "opacity(100%) blur(1.8px)" }}
           />
-          <Stack h={"100%"} pt={100} pb={60} c={"white"} justify="space-between" className="layout">
+          <Stack h={"100%"} pt={100} pb={60} c={"white"} justify={isMobile ? "space-between" : "center"} gap={70} className="layout">
             <Stack gap={isMobile ? 10 : 1}>
               <Text fw={600} pr={"40%"} fz={"1.1em"}>Pioneering Eco-Friendly Laundry in Indonesia</Text>
-              <Text fw={600} fz={"2.25em"} lts={1} pr={isMobile ? undefined : "40%"}>25 Outlets at 12 Cities Across Country</Text>
+              <Text fw={600} fz={"2.25em"} lh={isMobile ? "1.2" : undefined} lts={1} pr={isMobile ? undefined : "40%"}>25 Outlets at 12 Cities Across Country</Text>
             </Stack>
             <Stack>
               <Menu
@@ -96,7 +110,7 @@ export default function Home() {
               >
                 <Menu.Target>
                   <Group gap={1} align="center" justify={isMobile ? undefined : "space-between"}>
-                    <Text fw={700} w={"fit-content"} fz={isMobile ? "1.6em" : "1.4em"} style={{ padding: "0px", lineHeight: "normal", cursor:"pointer" }}>{outletList[selectedCity].city}</Text>
+                    <Text fw={700} w={"fit-content"} fz={isMobile ? "1.6em" : "1.4em"} style={{ padding: "0px", lineHeight: "normal", cursor: "pointer" }}>{outletList[selectedCity].city}</Text>
                     <i className="bx bx-chevron-down" style={{ display: isMobile ? "" : "none", fontSize: "2em" }} />
                     <Button visibleFrom="md" color="rgba(38, 39, 38, 0.7)" radius={"xl"} size="md"
                       style={{ border: "1px solid white" }}
@@ -113,7 +127,7 @@ export default function Home() {
               </Menu>
               <Group className="rm-scrollbar" p={0} pr={20} mr={isMobile ? "-20px" : "-70px"} style={{ overflow: "scroll", flexWrap: "nowrap", gap: isMobile ? "10px" : "30px", position: "relative" }}>
                 {outletList[selectedCity].outlets.map((value, index) => {
-                  return <OutletCard key={index} name={value.name} address={value.address} fz={isMobile ? "14px" : "16px"} />
+                  return <OutletCard key={index} name={value.name} address={value.address} fz={isMobile ? "15px" : "16px"} />
                 })}
               </Group>
             </Stack>
@@ -123,5 +137,7 @@ export default function Home() {
         <HeroApp />
       </Box>
     )
+  } else {
+    return <HomeLoader />
   }
 }

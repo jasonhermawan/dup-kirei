@@ -1,0 +1,42 @@
+.about-page-loader {
+    .first-content {
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        .content-text {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 45%;
+            }
+        }
+
+        .img-skel {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 55%;
+            }
+        }
+    }
+
+    .second-content {
+        .content-text {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 40%;
+            }
+        }
+        .img-skel {
+            border-radius: 0px;
+
+            @media (min-width: 768px) {
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -1,5 +1,7 @@
 "use client";
 import CommunityLoader from "@/pageLoader/communityLoader";
+import HomeLoader from "@/pageLoader/homeLoader";
+import AboutLoader from "@/pageLoader/aboutLoader";
 import LoginLoader from "@/pageLoader/loginLoader";
 import PartnershipLoader from "@/pageLoader/partnershipLoader";
 import ServiceLoader from "@/pageLoader/serviceLoader";
@@ -11,9 +13,9 @@ export default function Loading() {
   const pathname = usePathname();
 
   if (pathname === "/") {
-    return null;
+    return <HomeLoader />;
   } else if (pathname === "/about-us") {
-    return null;
+    return <AboutLoader />;
   } else if (pathname === "/our-services") {
     return <ServiceLoader />;
   } else if (pathname === "/partnership") {
