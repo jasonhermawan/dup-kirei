@@ -59,6 +59,7 @@ export default function Home() {
             {bannerList.map(({ desktop, mobile }, index) => {
               return <Carousel.Slide key={index}>
                 <Image
+                  quality={65}
                   src={isMobile ? mobile || desktop : desktop}
                   alt={`banner${index}`}
                   height={"0"}
