@@ -1,3 +1,10 @@
+.mainPage {
+    font-size: 16px;
+    @media (min-width: 768px) {
+        font-size: 21px;
+    }
+}  
+
 .control {
     background: rgba(202, 202, 202, 0.8);
     color: white;
