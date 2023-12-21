@@ -1,11 +1,11 @@
 "use client";
-import CommunityLoader from "@/pageLoader/communityLoader";
-import HomeLoader from "@/pageLoader/homeLoader";
-import AboutLoader from "@/pageLoader/aboutLoader";
-import LoginLoader from "@/pageLoader/loginLoader";
-import PartnershipLoader from "@/pageLoader/partnershipLoader";
-import ServiceLoader from "@/pageLoader/serviceLoader";
-import SignupLoader from "@/pageLoader/signupLoader";
+import CommunityLoader from "@/components/PageLoader/communityLoader";
+import HomeLoader from "@/components/PageLoader/homeLoader";
+import AboutLoader from "@/components/PageLoader/aboutLoader";
+import LoginLoader from "@/components/PageLoader/loginLoader";
+import PartnershipLoader from "@/components/PageLoader/partnershipLoader";
+import ServiceLoader from "@/components/PageLoader/serviceLoader";
+import SignupLoader from "@/components/PageLoader/signupLoader";
 import { Box, Loader } from "@mantine/core";
 import { usePathname } from "next/navigation";
 

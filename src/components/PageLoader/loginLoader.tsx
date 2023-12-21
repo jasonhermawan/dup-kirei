@@ -1,14 +1,14 @@
 import { Box, Flex, Skeleton } from '@mantine/core'
 import React from 'react'
-import '../app/(auth)/auth.css'
+import '../../app/(auth)/auth.css'
 
-const SignupLoader = () => {
+const LoginLoader = () => {
   const printForm = () => {
     return (
       <>
-        <Skeleton w="60%" h="50px" m="auto"/>
-        <Skeleton w="50%" h="50px" mt="20px" m="auto"/>
-        <Skeleton w="100%" h="50px" mt="80px" mb="80px"/>
+        <Skeleton w="80%" h="50px"/>
+        <Skeleton w="100%" h="50px" mt="50px"/>
+        <Skeleton w="100%" h="50px" mt="20px" mb="80px"/>
         <Skeleton w="100%" h="50px"/>
       </>
     )
@@ -35,4 +35,4 @@ const SignupLoader = () => {
   )
 }
 
-export default SignupLoader
+export default LoginLoader
