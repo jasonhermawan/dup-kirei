@@ -39,7 +39,7 @@ const OutletList = () => {
         </Menu.Item>
     });
 
-    return <Box className="outlet-list" h={"100vh"} mah={"800px"} pos={"relative"}>
+    return <Box className="outlet-list" h={"100vh"} mah={"800px"} pos={"relative"} style={{overflow:"clip"}}>
         <Image
             src="/home-leaf.png"
             alt="hero-img"
