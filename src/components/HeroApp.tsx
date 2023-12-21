@@ -2,12 +2,15 @@
 import { Box, Flex, Stack, Text, em } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
+import iphoneMockup from "../../public/Iphone-mockup.png";
+import appStore from "../../public/app-store.png";
+import playStore from "../../public/play-store.png";
 
 const HeroApp = () => {
     const isMobile = useMediaQuery(`(max-width: ${em(768)})`);
     return (
         <Box className="mobile-app-section layout" display={"flex"}
-            style={{ flexDirection: isMobile ? "column" : "row", justifyContent: "space-between" }}
+            style={{ flexDirection: isMobile ? "column" : "row", justifyContent: "space-between", width:"100vw", minHeight:"100vh" }}
         >
             <Flex className="content" direction={"column"} gap={60} pt={isMobile ? 20 : 100} pb={20} w={isMobile ? "100%" : "45%"}>
                 <Stack>
@@ -16,7 +19,7 @@ const HeroApp = () => {
                 </Stack>
                 <Flex direction={isMobile ? "column" : "row"} gap={"10px"}>
                     <Image
-                        src={"/play-store.png"}
+                        src={playStore}
                         alt="play-store"
                         height={0}
                         width={0}
@@ -24,7 +27,7 @@ const HeroApp = () => {
                         style={{ width: "16vw", minWidth: isMobile ? "300px" : "150px", height: "auto" }}
                     />
                     <Image
-                        src={"/app-store.png"}
+                        src={appStore}
                         alt="app-store"
                         height={0}
                         width={0}
@@ -34,7 +37,7 @@ const HeroApp = () => {
                 </Flex>
             </Flex>
             <Image
-                src={"/Iphone-mockup.png"}
+                src={iphoneMockup}
                 alt="app-mockup"
                 height={0}
                 width={0}
