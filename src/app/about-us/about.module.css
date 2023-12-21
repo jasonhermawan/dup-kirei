@@ -1,0 +1,90 @@
+.aboutPage {
+    font-size: 16px;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+
+}
+
+.content01 {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    .text {
+        font-size: 1.5em;
+
+        @media (min-width: 768px) {
+            font-size: 1.166em;
+            width: 45%;
+        }
+    }
+
+    .image {
+        width: 100vw;
+        height: auto;
+
+        @media (min-width: 768px) {
+            width: 55%;
+        }
+    }
+}
+
+.content02 {
+    height: fit-content;
+    
+    @media (min-width:768px) {
+        margin-bottom: 150px;
+        height: 80vh;
+        max-height: 650px;
+    }
+
+    .text>:first-child {
+
+        @media (min-width: 768px) {
+            width: 40%;
+            border-top: 3px solid black;
+            border-image: linear-gradient(to right, #FFF 50%, transparent 50%) 100% 1;
+        }
+
+        >* {
+            font-size: 1.25em;
+
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .text>:nth-child(2) {
+
+        @media (min-width: 768px) {
+            >* {
+                font-size: 0.75em;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .image {
+        width: 100vw;
+        max-width: 800px;
+        height: "auto";
+        max-height: 450px;
+        object-fit: cover;
+        margin: auto;
+        border-radius: 0px;
+        position: relative;
+        @media (min-width: 768px) {
+            border-radius: 25px;
+            bottom: -6vh;
+        }
+    }
+
+
+}
