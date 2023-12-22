@@ -9,7 +9,7 @@ type props = {
 const OutletCard = ({ name, address, fz }: props) => {
 
     return (
-        <Box bg={"rgba(33, 51, 41, 0.97)"} c={"white"}
+        <Box className="rm-scrollbar" bg={"rgba(33, 51, 41, 0.97)"} c={"white"}
             h={"200px"} w={"90%"} miw={"360px"} maw={"360px"}
             px={"lg"} py={"md"}
             fz={fz}
