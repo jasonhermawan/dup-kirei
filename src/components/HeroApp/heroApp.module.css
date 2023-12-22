@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: clip;
+
     @media (min-width: 768px) {
         height: 100vh;
         min-height: 0px;
@@ -25,8 +27,9 @@
         width: 45%;
     }
 
-    .text>:last-child{
+    .text>:last-child {
         font-size: 1.25em;
+
         @media (min-width:768px) {
             font-size: 0.8em;
         }
@@ -41,11 +44,11 @@
         }
 
         >* {
-            width: 16vw;
-            min-width: 300px;
+            width: 100%;
             height: auto;
 
             @media (min-width: 768px) {
+                width: 50%;
                 min-width: 150px;
             }
         }
@@ -60,7 +63,7 @@
     margin-left: -20px;
     object-fit: cover;
     z-index: -9999;
-    
+
     @media (min-width: 768px) {
         position: relative;
         bottom: -90px;
